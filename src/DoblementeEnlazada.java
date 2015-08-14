@@ -65,13 +65,13 @@ public class DoblementeEnlazada<E> implements ADTLista<E> {
 	@Override
 	public E getFirst() {
 		// TODO Auto-generated method stub
-		return null;
+		return head.value();
 	}
 
 	@Override
 	public E getLast() {
 		// TODO Auto-generated method stub
-		return null;
+		return tail.value();
 	}
 
 	@Override

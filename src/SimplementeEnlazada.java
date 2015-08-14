@@ -76,7 +76,11 @@ public class SimplementeEnlazada<E> implements ADTLista<E> {
 	@Override
 	public E getLast() {
 		// TODO Auto-generated method stub
-		return null;
+		Node <E> finger = head;
+		while(finger.next() != null){
+			finger = finger.next();
+		}
+		return finger.value();
 	}
 
 	@Override

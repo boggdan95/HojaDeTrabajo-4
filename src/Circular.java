@@ -13,7 +13,7 @@ public class Circular<E> implements ADTLista<E> {
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub
-		return 0;
+		return count;
 	}
 
 	@Override
@@ -66,13 +66,13 @@ public class Circular<E> implements ADTLista<E> {
 	@Override
 	public E getFirst() {
 		// TODO Auto-generated method stub
-		return null;
+		return tail.next().value();
 	}
 
 	@Override
 	public E getLast() {
 		// TODO Auto-generated method stub
-		return null;
+		return tail.value();
 	}
 
 	@Override
