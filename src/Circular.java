@@ -1,21 +1,21 @@
 
-public class Circular<E> implements ADTLista<E> {
+public class Circular<E> extends AbstractList implements ADTLista<E> {
 	
 	protected Node<E> tail;
 	protected int count;
 
+	/**
+	 * Instantiates a new circular.
+	 */
 	public Circular() {
 		// TODO Auto-generated constructor stub
 		tail = null;
 		count = 0;
 	}
 
-	@Override
-	public int size() {
-		// TODO Auto-generated method stub
-		return count;
-	}
-
+	/* (non-Javadoc)
+	 * @see ADTLista#addFirst(java.lang.Object)
+	 */
 	@Override
 	public void addFirst(E value) {
 		// TODO Auto-generated method stub
@@ -31,12 +31,18 @@ public class Circular<E> implements ADTLista<E> {
 		count++;
 	}
 
+	/* (non-Javadoc)
+	 * @see ADTLista#removeFirst()
+	 */
 	@Override
 	public E removeFirst() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/* (non-Javadoc)
+	 * @see ADTLista#removeLast()
+	 */
 	@Override
 	public E removeLast() {
 		// TODO Auto-generated method stub
@@ -56,6 +62,9 @@ public class Circular<E> implements ADTLista<E> {
 		return temp.value();
 	}
 
+	/* (non-Javadoc)
+	 * @see ADTLista#addLast(java.lang.Object)
+	 */
 	@Override
 	public void addLast(E value) {
 		// TODO Auto-generated method stub
@@ -63,18 +72,27 @@ public class Circular<E> implements ADTLista<E> {
 		tail = tail.next();
 	}
 
+	/* (non-Javadoc)
+	 * @see ADTLista#getFirst()
+	 */
 	@Override
 	public E getFirst() {
 		// TODO Auto-generated method stub
 		return tail.next().value();
 	}
 
+	/* (non-Javadoc)
+	 * @see ADTLista#getLast()
+	 */
 	@Override
 	public E getLast() {
 		// TODO Auto-generated method stub
 		return tail.value();
 	}
 
+	/* (non-Javadoc)
+	 * @see ADTLista#contains(java.lang.Object)
+	 */
 	@Override
 	public boolean contains(E value) {
 		// TODO Auto-generated method stub
@@ -83,6 +101,12 @@ public class Circular<E> implements ADTLista<E> {
 			finger.next();
 		}
 		return finger != null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return count;
 	}
 	
 	

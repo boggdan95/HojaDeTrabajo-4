@@ -1,3 +1,8 @@
+/**
+ * @author Boggdan Barrientos, Diego De Leon, Jasmin Valdez
+ *
+ */
+
 public class DoubleNode<E>{
 	
 	protected E data;

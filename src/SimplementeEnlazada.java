@@ -1,4 +1,9 @@
-public class SimplementeEnlazada<E> implements ADTLista<E> {
+/**
+ * @author Boggdan Barrientos, Diego De Leon, Jasmin Valdez
+ *
+ */
+
+public class SimplementeEnlazada<E> extends AbstractList implements ADTLista<E> {
 	
 	protected int count;
 	protected Node<E> head; 

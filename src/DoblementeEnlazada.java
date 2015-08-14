@@ -1,4 +1,4 @@
-public class DoblementeEnlazada<E> implements ADTLista<E> {
+public class DoblementeEnlazada<E> extends AbstractList implements ADTLista<E> {
 	
 	protected int count;
 	protected DoubleNode<E> head;

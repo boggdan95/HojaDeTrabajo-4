@@ -1,3 +1,7 @@
+/**
+ * @author Boggdan Barrientos, Diego De Leon, Jasmin Valdez
+ *
+ */
 
 public interface ADTLista<E> {
 	
