@@ -113,12 +113,18 @@ public class Circular<E> extends AbstractList implements ADTLista<E> {
 		return finger != null;
 	}
 
+	/* (non-Javadoc)
+	 * @see AbstractList#size()
+	 */
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub
 		return count;
 	}
 	
+	/**
+	 * Clear.
+	 */
 	public void clear(){
 		tail = null;
 		count = 0;

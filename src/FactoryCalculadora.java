@@ -15,6 +15,11 @@ public class FactoryCalculadora<P, E> implements ADTCalculadora{
     private double Resultado;
     private ADTStack Lista;    
   
+    /**
+     * Crear objeto.
+     *
+     * @param i the i
+     */
     public void crearObjeto(int i){
         switch(i){
         case 1:

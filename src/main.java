@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * @author Boggdan Barrientos, Diego De Leon, Jasmin Valdez
- *
+ * @15 de agosto de 2015
  */
 
 public class main {
