@@ -1,14 +1,4 @@
-/ADTCalculadora.class
-/ADTLista.class
-/ADTStack.class
-/AbstractList.class
-/AbstractStack.class
-/Calculadora.class
-/Circular.class
-/DoblementeEnlazada.class
-/DoubleNode.class
-/Factory.class
-/Node.class
+/FactoryCalculadora.class
 /SimplementeEnlazada.class
 /StackArrayList.class
 /StackC.class
@@ -16,3 +6,4 @@
 /StackSE.class
 /StackVector.class
 /main.class
+/Calculadora.class
