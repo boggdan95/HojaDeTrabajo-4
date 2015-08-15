@@ -23,7 +23,7 @@ public class SimplementeEnlazada<E> extends AbstractList implements ADTLista<E> 
 	@Override
 	public void addFirst(E value) {
 		// TODO Auto-generated method stub
-		Node<E> temp = new Node<E>(value,null); 
+		head = new Node<E>(value,head); 
 		count++;	
 	}
 
@@ -96,6 +96,11 @@ public class SimplementeEnlazada<E> extends AbstractList implements ADTLista<E> 
 			finger.next();
 		}
 		return finger != null;
+	}
+	
+	public void clear(){
+		head = null;
+		count = 0;
 	}
 
 }

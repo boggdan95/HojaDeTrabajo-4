@@ -37,7 +37,17 @@ public class Circular<E> extends AbstractList implements ADTLista<E> {
 	@Override
 	public E removeFirst() {
 		// TODO Auto-generated method stub
-		return null;
+		Node<E> temp = null;
+		if( tail == tail.next()){
+			temp = tail.next();
+			tail = null;
+		}
+		else if (tail != tail.next()){
+			temp = tail.next();
+			tail.setNext(tail.next().next());
+		}
+		count--;
+		return temp.value();
 	}
 
 	/* (non-Javadoc)
@@ -107,6 +117,11 @@ public class Circular<E> extends AbstractList implements ADTLista<E> {
 	public int size() {
 		// TODO Auto-generated method stub
 		return count;
+	}
+	
+	public void clear(){
+		tail = null;
+		count = 0;
 	}
 	
 	

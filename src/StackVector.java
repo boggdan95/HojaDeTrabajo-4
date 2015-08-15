@@ -6,7 +6,7 @@ import java.util.Vector;
  *
  * @param <E>
  */
-public class StackVector<E> implements ADTStack<E>{
+public class StackVector<E> extends AbstractStack implements ADTStack<E>{
     
     protected Vector<E> pila;
     

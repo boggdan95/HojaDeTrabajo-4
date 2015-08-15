@@ -1,14 +1,17 @@
 
-public class StackDE<E> implements ADTStack<E> {
+public class StackDE<E> extends AbstractStack implements ADTStack<E> {
 	
-	protected DoblementeEnlazada<E> pila;
-	
+	protected DoblementeEnlazada<E> pila = new DoblementeEnlazada<E>();
+		
+	public StackDE() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void empty() {
 		// TODO Auto-generated method stub
-		int size = pila.size();
-		for (int i = 0; i <= size; i++){
-			pila.removeFirst();	}
+		pila.clear();
 	}
 
 	@Override
@@ -19,9 +22,9 @@ public class StackDE<E> implements ADTStack<E> {
 	}
 
 	@Override
-	public void push(E dat) {
+	public void push(E x) {
 		// TODO Auto-generated method stub
-		pila.addFirst(dat);
+		pila.addFirst(x);
 		
 	}
 

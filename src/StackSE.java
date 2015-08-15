@@ -1,15 +1,17 @@
 
-public class StackSE<E> implements ADTStack<E>{
+public class StackSE<E> extends AbstractStack implements ADTStack<E>{
 
-	protected SimplementeEnlazada<E> pila;
+	protected SimplementeEnlazada<E> pila = new SimplementeEnlazada<E>();
 	
+	public StackSE() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void empty() {
 		// TODO Auto-generated method stub
-		int tamaño = pila.size();
-		for (int i = 0; i <= tamaño; i++){
-			pila.removeFirst();
-		}
+		pila.clear();
 	}
 
 	@Override
@@ -24,7 +26,6 @@ public class StackSE<E> implements ADTStack<E>{
 	public void push(E x) {
 		// TODO Auto-generated method stub
 		pila.addFirst(x);
-		
 	}
 
 	@Override

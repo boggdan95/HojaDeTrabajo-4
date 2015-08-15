@@ -1,15 +1,19 @@
 
-public class StackC<E> implements ADTStack<E> {
+public class StackC<E> extends AbstractStack implements ADTStack<E> {
 	
-	protected Circular<E> pila;
+	protected Circular<E> pila = new Circular<E>();
+	
+	
+
+	public StackC() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public void empty() {
 		// TODO Auto-generated method stub
-		int tamaño = pila.size();
-		for (int i = 0; i <= tamaño; i++){
-			pila.removeFirst();
-		}
+		pila.clear();
 	}
 
 	@Override

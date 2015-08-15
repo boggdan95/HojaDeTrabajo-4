@@ -4,12 +4,13 @@ public class DoblementeEnlazada<E> extends AbstractList implements ADTLista<E> {
 	protected DoubleNode<E> head;
 	protected DoubleNode<E> tail;
 
-	public DoblementeEnlazada(E value, DoblementeEnlazada<E> head, DoblementeEnlazada<E> tail) {
+	
+
+	public DoblementeEnlazada() {
 		// TODO Auto-generated constructor stub
-		head = head;
-		tail = tail;
+		head = null;
+		tail = null;
 		count = 0;
-		
 	}
 
 	@Override
@@ -25,15 +26,17 @@ public class DoblementeEnlazada<E> extends AbstractList implements ADTLista<E> {
 		
 		if (tail == null){
 			tail = head;
-			count ++;
 		}
-		
+		count ++;
 	}
 
 	@Override
 	public E removeFirst() {
 		// TODO Auto-generated method stub
-		return null;
+		DoubleNode<E> temp = head;
+		head = head.next();
+		count--;
+		return temp.value();
 	}
 
 	@Override
@@ -54,7 +57,7 @@ public class DoblementeEnlazada<E> extends AbstractList implements ADTLista<E> {
 	@Override
 	public void addLast(E value) {
 		// TODO Auto-generated method stub
-		tail = new DoubleNode<E>(value,null,null);
+		tail = new DoubleNode<E>(value,null,tail);
 		if(head == null){
 			head = tail;
 		}
@@ -82,6 +85,13 @@ public class DoblementeEnlazada<E> extends AbstractList implements ADTLista<E> {
 			finger.next();
 		}
 		return finger != null;
+	}
+	
+	public void clear(){
+		head = null;
+		tail = null;
+		count = 0;
+		
 	}
 
 }

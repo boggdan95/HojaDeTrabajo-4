@@ -6,7 +6,7 @@ import java.util.ArrayList;
  *
  * @param <E>
  */
-public class StackArrayList<E> implements ADTStack<E>{
+public class StackArrayList<E> extends AbstractStack implements ADTStack<E>{
     
     protected ArrayList<E> pila;
     

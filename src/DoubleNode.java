@@ -10,15 +10,17 @@ public class DoubleNode<E>{
 	protected DoubleNode<E> previousElement;
 	
 	
-	public DoubleNode(E v, DoubleNode<E> next, DoubleNode<E> previous) {
+	public DoubleNode(E v, 
+			DoubleNode<E> next,
+			DoubleNode<E> previous) {
 		data = v;
 		nextElement = next;
-		if(nextElement == null){
+		if(nextElement != null){
 			nextElement.previousElement = this;
+		}
 		previousElement = previous;
 		if (previousElement != null){
 			previousElement.nextElement = this;
-		}
 		}
 	}
 	
